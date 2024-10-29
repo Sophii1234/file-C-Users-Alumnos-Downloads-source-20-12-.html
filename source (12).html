@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <style></style>
+        </head>
+        <body>
+            
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Restringido</title>
+    <style>
+        /* Estilo general */
+        body {
+            background-color: #0b0b0b;
+            color: #e0e0e0;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        /* Contenedor */
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 30px 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 60px rgba(255, 0, 0, 0.4);
+            max-width: 400px;
+            animation: parpadeo 2s infinite alternate;
+        }
+
+        /* Título */
+        h1 {
+            font-size: 2rem;
+            color: #ff1a1a;
+            text-shadow: 0 0 10px #ff1a1a, 0 0 30px #ff4d4d;
+        }
+
+        /* Estilo del input */
+        input[type="password"] {
+            background-color: #111;
+            color: #f2f2f2;
+            border: none;
+            border-bottom: 2px solid #ff1a1a;
+            padding: 10px;
+            font-size: 1.1rem;
+            width: 100%;
+            margin-top: 20px;
+            outline: none;
+        }
+
+        /* Botón */
+        button {
+            background-color: #ff1a1a;
+            color: #0b0b0b;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 26, 26, 0.4);
+        }
+        button:hover {
+            background-color: #ff4d4d;
+            transform: scale(1.05);
+        }
+
+        /* Mensaje de error */
+        #mensaje {
+            color: #ff4c4c;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* Efecto de parpadeo */
+        @keyframes parpadeo {
+            from {
+                box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 60px rgba(255, 0, 0, 0.4);
+            }
+            to {
+                box-shadow: 0 0 40px rgba(255, 0, 0, 1), 0 0 90px rgba(255, 0, 0, 0.8);
+            }
+        }
+    </style>
+    <script>
+        function verificarContraseña() {
+            const contraseña = document.getElementById("contraseña").value;
+            if (contraseña === "11323") {
+                window.open("https://view.genially.com/6720d81db7f41bc819c8ef27/interactive-content-historia-quimica-parte-2", "_blank");
+            } else {
+                document.getElementById("mensaje").textContent = "Error: Contraseña incorrecta. Inténtalo de nuevo...";
+            }
+        }
+    </script>
+
+
+    <div class="container">
+        <h1>Acceso Restringido</h1>
+        <p>Introduce la contraseña para acceder al contenido oculto:</p>
+        
+        <!-- Campo de entrada de contraseña -->
+        <input type="password" id="contraseña" placeholder="Contraseña">
+        
+        <!-- Botón para verificar la contraseña -->
+        <button onclick="verificarContraseña()">Ingresar</button>
+        
+        <!-- Mensaje de error -->
+        <p id="mensaje"></p>
+    </div>
+
+
+
+            <script></script>
+        
+    
+</body>
